@@ -1,0 +1,91 @@
+.bg-\[url\(\'\/img\/section\.svg\'\)\],
+ .bg-\[url\(\'\/img\/m2\.png\'\)\],
+ .bg-\[url\(\'\/img\/m4\.png\'\)\] {
+ position: absolute;
+
+}
+@media (max-width: 1414px) {
+    .bg-\[url\(\'\/img\/section\.svg\'\)\] div {
+ margin-right: 20px;
+}
+
+}
+@media (max-width: 1280px) {
+    .bg-\[url\(\'\/img\/section\.svg\'\)\] div p,
+ .bg-\[url\(\'\/img\/section2\.svg\'\)\] div p {
+ width: 25vw;
+}
+.bg-\[url\(\'\/img\/section\.svg\'\)\] div p,
+ .bg-\[url\(\'\/img\/section\.svg\'\)\] div h3 {
+ margin-left: 12vw;
+
+}
+.discordwidget {
+    display: none;
+}
+
+}
+@media (max-width: 1176px) {
+    .bg-\[url\(\'\/img\/section\.svg\'\)\],
+ .bg-\[url\(\'\/img\/m2\.png\'\)\],
+ .bg-\[url\(\'\/img\/m4\.png\'\)\] {
+ position: relative;
+}
+#survival, #skyblock {
+    flex-direction: column-reverse;
+    height: 46rem;
+}
+#minihry, #economy {
+    flex-direction: column;
+    height: 46rem;
+}
+#minihry div, #economy div, #survival div, #skyblock div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#minihry p, #economy p, #survival p, #skyblock p, #minihry h3, #economy h3, #survival h3, #skyblock h3 {
+    margin: 0;
+    width: 60%;
+    text-align: center;
+}
+.description {
+    background-image: url("/img/bg.svg");
+}
+.description2 {
+    background-image: url("/img/bg2.svg");
+}
+#minihry h3, #economy h3, #survival h3, #skyblock h3 {
+    font-size: 1.7em;
+}
+
+}
+@media (max-width: 1025px) {
+    header h1 {
+        font-size: 6rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 535px) {
+    header h1 {
+        font-size: 4rem;
+        margin-botom: -5rem;
+    }
+    header h2 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .logo {
+        height: 5px;
+    }
+    header {
+        background-position: center;
+    }
+}
+table button {
+    background: #6bff5e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

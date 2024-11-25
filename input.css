@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-image: linear-gradient( to right bottom, #659f2b, #6fad31, #7abc38, #85cb3e, #90da45);
+}
+
+.logo {
+    -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
+    filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 20rem;
+    background-color: aquamarine;
+}
+
+.wave {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+    top: 17rem;
+    height: 300vh;
+}
+
+.shadows {
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box-shadows {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 9em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: -2rem;
+}
+
+.ip {
+    color: #162c00;
+}
+
+.status {
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.status h4 {
+    color: #326500;
+}
+
+.status h3 {
+    color: #172f00;
+}
+
+.online {
+    color: #33ff00;
+    text-shadow: 0px 4px 20px #33ff00;
+}
+
+.offline {
+    color: #c60000;
+    text-shadow: 0px 4px 20px #c60000;
+}
+
+.cards h4 {
+    color: #162c00;
+}
+
+.dc {
+    margin-bottom: -4rem;
+}
+
+.discord {
+    background-color: #5865f2;
+}
+
+.filler {
+    height: 102rem;
+}
+
+@media (min-width: 780px) {
+    .wave {
+        height: 200vh;
+    }
+    .filler {
+        height: 52rem;
+    }
+}
+
+@media (min-height: 850px) and (min-width: 1200px) {
+    .wave {
+        height: 150vh;
+    }
+    .filler {
+        height: 22rem;
+    }
+}
+
+@media (max-height: 790px) and (max-width: 400px) {
+    .wave {
+        height: 360vh;
+    }
+    .filler {
+        height: 120rem;
+    }
+}
+
+@media (max-height: 670px) and (max-width: 400px) {
+    .wave {
+        height: 380vh;
+    }
+    .filler {
+        height: 120rem;
+    }
+}
+
+.row .three {
+    padding: 80px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+#hamburger-2.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+
+#hamburger-2.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-13px);
+    -ms-transform: translateY(-13px);
+    -o-transform: translateY(-13px);
+    transform: translateY(-13px);
+}
+
+.majitel div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #3b6cb5 1.04%, #15006b 95.15%);
+    border-radius: 20px;
+}
+
+.majitel h3 {
+    color: #000a3e;
+}
+
+.dev div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #b53b3b 1.04%, #6b0000 95.15%);
+    border-radius: 20px;
+}
+
+.dev h3 {
+    color: #3e0000;
+}
+
+.admin div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #47b53b 1.04%, #013e00 95.15%);
+    border-radius: 20px;
+}
+
+.admin h3 {
+    color: #0f3e00;
+}
+
+.builder div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #b53bb1 1.04%, #3b003e 95.15%);
+    border-radius: 20px;
+}
+
+.builder h3 {
+    color: #3b003e;
+}
+
+.helper div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #e6a212 1.04%, #a87404 95.15%);
+    border-radius: 20px;
+}
+
+.helper h3 {
+    color: #845c05;
+}
+
+.academy div {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(94.3deg, #1287e6 1.04%, #047fa8 95.15%);
+    border-radius: 20px;
+}
+
+.academy h3 {
+    color: #055a84;
+}

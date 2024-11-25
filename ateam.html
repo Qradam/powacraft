@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Česko-Slovenský server s ekonomikou, survivalom, sky/oneblockom a minihrami." />
+    <meta name="keywords" content="minecraft, server, 1.19, 1.19.1, survival, minihry, ekonomika" />
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <meta name="copyright" content="FlashPrank, PowaCraft" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="output.css" />
+    <title>PowaCraft A-Team</title>
+</head>
+
+<body>
+
+
+    <!-- MOBILNÉ MENU -->
+
+    <header class="w-full h-screen bg-[url('/img/night2.png')] bg-fixed bg-cover overflow-hidden">
+        <div class="absolute w-full h-auto z-40 menu">
+            <li class="hidden">
+                <div class="w-full h-24 bg-white border-2 border-lime-100 flex items-center justify-center"></div>
+            </li>
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a href="index" class="text-lime-400 font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400">
+              Home
+            </a>
+                </div>
+            </li>
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 flex font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="prikazy">
+              Help
+            </a>
+                </div>
+            </li>
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="http://185.240.132.132:40029/">
+              Dynmap
+            </a>
+                </div>
+            </li>
+			
+			<li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="ateam">
+              A-Team
+            </a>
+                </div>
+            </li>
+			
+			<li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="http://panel.powacraft.sk/">
+              AT Panel
+            </a>
+                </div>
+            </li>
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a href="vip" class="a w-28 h-16 bg-cover bg-[url('/img/vip.svg')] ease-in-out duration-300 hover:contrast-125">
+                    </a>
+                </div>
+            </li>
+        </div>
+        <nav class="w-full h-24 md:bg-white flex justify-center items-center">
+            <a href="index">
+                <img src="img/logo.svg" alt="" class="sm:w-20 sm:h-20 h-16 w-16 absolute top-2 left-15 cursor-pointer" />
+            </a>
+
+
+            <!-- MOBILNÁ NAVIGÁCIA -->
+
+            <div class="three col absolute right-10 top-7 z-50 md:hidden" onclick="Hamburger()">
+                <div class="hamburger" id="hamburger-2">
+                    <span class="line bg-black"></span>
+                    <span class="line bg-black"></span>
+                    <span class="line bg-black"></span>
+                </div>
+            </div>
+
+
+            <!-- NAVIGÁCIA -->
+
+            <div class="hidden md:flex items-center space-x-8 antialiased w-full justify-end mr-8">
+                <a href="index" class="text-black font-poppins font-medium ease-in-out duration-300 hover:text-lime-400">
+            Home
+          </a>
+                <a class="text-black flex font-poppins cursor-pointer font-medium mt-0 ease-in-out duration-300 hover:text-lime-400" onclick="Pomoc()">
+            Help
+            <svg
+              class="mt-2 ml-2"
+              width="12"
+              height="8"
+              viewBox="0 0 17 12"
+              fill="black"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7.5 11.5L0 0H17L7.5 11.5Z" fill="black" />
+            </svg>
+            
+          </a>
+                <a href="prikazy" class="absolute right-119 top-16"> <span class="absolute pb-2 pt-1 font-poppins border-2 border-lime-300 rounded-md text-lime-600 font-medium hidden bg-white px-5">Commands</span></a>
+
+                <a class="text-black overflow-hidden font-poppins font-medium ease-in-out duration-300 hover:text-lime-400" href="http://185.240.132.132:40029/">
+            Dynmap
+          </a>
+		  
+                <a class="text-lime-600 overflow-hidden font-poppins font-medium ease-in-out duration-300 hover:text-lime-400" href="ateam">
+            A-Team
+          </a>		  
+
+			        <a class="text-black overflow-hidden font-poppins font-medium ease-in-out duration-300 hover:text-lime-400" href="http://panel.powacraft.sk/">
+              AT Panel
+            </a>
+			
+                <a href="vip" class="a w-28 h-16 bg-cover bg-[url('/img/vip2.svg')] ease-in-out duration-300 hover:contrast-125">
+                </a>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+
+        <h1 class="font-raleway font-extrabold text-6xl sm:text-8xl text-white text-center shadows mt-48 z-20">
+            Admin Team
+        </h1>
+
+        <!-- VLNA -->
+
+        <div class="absolute w-full h-120 bg-[url('/img/wave2.svg')] bg-cover bottom-0 flex items-end justify-center">
+            <div class="w-1/2 h-52 flex flex-col items-center justify-center gap-5">
+                <a href="#ateam">
+                    <h2 class="font-raleway text-lime-400 font-semibold text-center text-4xl hidden sm:block">
+						Meet our team
+                    </h2>
+                </a>
+                <a href="#ateam" class="hidden sm:block">
+                    <div>
+                        <img src="img/arrow.svg" alt="" />
+                        <img src="img/arrow.svg" alt="" />
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- A-TEAM -->
+	
+	    <!-- VEDENIE -->
+	    <section class="w-full h-auto lg:h-128 bg-white flex flex-col items-center gap-5">
+            <h1 class="font-raleway text-5xl font-black text-red-800 text-center">SERVER MANAGEMENT</h1>
+            <div class="flex gap-24 flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">	
+		
+                <div class="AT-card">
+					<div class="gap-5 majitel flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/e29a12dcf04444b2abf94c29d5e113b5" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Owner</div>
+						<h3 class="font-poppins font-semibold text-lg">Powiss</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">powiss</a>
+					</div>
+                </div>	
+				
+				
+                <div class="flex flex-col items-center gap-5 dev AT-card">
+                    <img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/ca78a4ce-f294-41fe-95f5-80a90d41eb26" alt="" />
+                    <div class="flex items-center justify-center font-poppins font-semibold text-white">Developer</div>
+                    <h3 class="font-poppins font-semibold text-lg">_TheTomi_</h3>
+                </div>		
+
+				<div class="AT-card">
+					<div class="gap-5 dev flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/40808836-2711-4193-94ae-58273535a9f3" alt="" />
+                    <div class="flex items-center justify-center font-poppins font-semibold text-white">Manager</div>
+						<h3 class="font-poppins font-semibold text-lg mb-15 lg:mb-0">Tomkudleq</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">tomkudleq</a>
+					</div>
+				</div>					
+        </section>
+	
+	
+	
+
+    <section class="w-full bg-white lg:h-128 h-auto grid lg:grid-cols-6 lg:grid-rows-1 gap-10" id="ateam">
+	
+	    <!-- ADMINI -->
+        <div class="flex justify-start items-center flex-col gap-5 col-span-3" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="font-raleway text-5xl font-black text-lime-800">ADMINS</h1>
+            <div class="flex flex-col md:flex-row gap-24">				
+
+				<div class="AT-card">
+					<div class="gap-5 admin flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/1adb797a-54ef-4bc5-8097-ced13d021afd" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Admin</div>
+						<h3 class="font-poppins font-semibold text-lg">FlashPrank</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">le_ondrej</a>
+					</div>
+                </div>	
+							
+            </div>		
+        </div>
+		
+		<!-- BUILDERI -->
+        <div class="flex justify-start items-center flex-col gap-5 col-span-3" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="font-raleway text-5xl font-black text-fuchsia-800">BUILDERS</h1>
+            <div class="flex flex-col md:flex-row gap-24">
+			
+				<div class="AT-card">
+					<div class="gap-5 builder flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/0ffde015-0ae0-47be-9abc-d08710646d94" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Sr. Builder</div>
+						<h3 class="font-poppins font-semibold text-lg">Greeny_Beany</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">greenybeany</a>
+					</div>
+                </div>	
+				
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	<!-- HELPERI -->
+    <section class="w-full h-auto lg:h-128 bg-white flex flex-col items-center gap-5">
+            <h1 class="font-raleway text-5xl font-black text-yellow-600">HELPERS</h1>
+        <div class="flex gap-24 flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">		
+				
+				<div class="AT-card">
+					<div class="gap-5 helper flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/850f24bf-3702-4d27-9fb7-48a6afc97f92" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Sr. Helper</div>
+						<h3 class="font-poppins font-semibold text-lg">Resy_2011</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">resy_2011</a>
+					</div>
+                </div>	
+				
+				<div class="AT-card">
+					<div class="gap-5 helper flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/45ce907d-5e5e-4647-adf2-c61033b2f204" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Helper</div>
+						<h3 class="font-poppins font-semibold text-lg">Leonid_Brezhnev</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">monsieuraustrian</a>
+					</div>
+                </div>
+
+				<div class="AT-card">
+					<div class="gap-5 helper flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/c687e52b-83e1-3298-9139-f4bcd94325d3" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Helper</div>
+						<h3 class="font-poppins font-semibold text-lg">Moravaak_</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">moravaak__63107</a>
+					</div>
+                </div>	
+
+				<div class="AT-card">
+					<div class="gap-5 helper flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/04b7e71b-b243-4f1c-bae4-f7d4649d5977" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Helper</div>
+						<h3 class="font-poppins font-semibold text-lg">Marolololo</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">Molni#9354</a>
+					</div>
+                </div>						
+		
+		</div>					
+    </section>
+	
+	
+	
+	<!-- AKADEMICI -->
+    <section class="w-full h-auto lg:h-128 bg-white flex flex-col items-center gap-5">
+        <h1 class="font-raleway text-5xl font-black text-sky-600 mt-7 lg:mt-5 text-center" data-aos="fade-up" data-aos-duration="1000">JUNIOR HELPERS</h1>
+        <div class="flex gap-24 flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">			
+				
+				<div class="AT-card">
+					<div class="gap-5 academy flex flex-col items-center">
+						<img class="w-40 h-40 box-shadows" src="https://visage.surgeplay.com/bust/512/27b35bda-f9fd-4414-b02b-f81a81b3beb7" alt="" />
+						<div class="flex items-center justify-center font-poppins font-semibold text-white">Jr. Helper</div>
+						<h3 class="font-poppins font-semibold text-lg">ItzLamaTvlxd</h3>
+					</div>
+					<div class="flex items-center gap-2 mt-4">
+						<img class="w-11 h-11" src="img/discord-purple.png"> 
+						<a class="font-poppins">itzlamatvlxd</a>
+					</div>
+                </div>						
+				
+        </div>								
+    </section>
+	
+	<!-- DOVOLENKA 
+	<section class="w-full h-auto lg:h-128 bg-white flex flex-col items-center gap-5">
+		<h1 class="font-raleway text-5xl font-black text-gray-600 mt-7 lg:mt-5" data-aos="fade-up" data-aos-duration="1000">DOVOLENKA</h1>
+		<div class="flex gap-24 flex-col lg:flex-row" data-aos="fade-up" data-aos-duration="1000">		
+			
+		</div>		
+    </section>-->
+	
+	
+	
+
+    <!-- FOOTER -->
+
+    <footer class="w-full md:h-32 h-52 bg-zinc-200 flex justify-center items-center gap-2 md:gap-7 flex-col md:flex-row">
+        <div class="font-poppins text-xl font-semibold md:absolute left-15">
+            <h5>PowaCraft</h5>
+        </div>
+        <div><img class="w-24 h-24" src="img/logo.svg" alt="" /></div>
+        <a href="http://adamzy.space" target="”_blank”" class="flex gap-2 md:absolute right-15">
+            <h5>Website created by</h5>
+            <h5 class="font-poppins text-orange-600 font-medium underline">
+                Adam Ujházy
+            </h5>
+        </a>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

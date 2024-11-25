@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Česko-Slovenský server s ekonomikou, survivalom, sky/oneblockom a minihrami." />
+    <meta name="keywords" content="minecraft, server, 1.19, 1.19.2, survival, minihry, ekonomika, creative" />
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    <meta name="copyright" content="FlashPrank, PowaCraft" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="output.css" />
+    <title>PowaCraft</title>
+</head>
+
+<body>
+    <header class="a w-full h-screen bg-[url('/img/bg.png')] bg-fixed bg-top bg-cover overflow-hidden bg-black">
+
+
+		<div class="text-black justify-center items-center flex text-3xl bg-white pb-2">
+			<a>Na stránke práve prebieha preklad a úprava, za prípadne problémy sa ospravedlňujeme!</a>
+		</div>
+
+        <!-- MOBILNÉ MENU -->
+
+        <div class="absolute w-full h-auto z-40 menu">
+            <li class="hidden">
+                <div class="w-full h-24 bg-white border-2 border-lime-100 flex items-center justify-center"></div>
+            </li>
+			
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a href="index" class="text-lime-400 font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400">
+              Home
+            </a>
+                </div>
+            </li>
+			
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 flex font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="prikazy">
+              Help
+            </a>
+                </div>
+            </li>
+			
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="http://185.240.132.132:40029/">
+              Dynmap
+            </a>
+                </div>
+            </li>
+			
+			<li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="ateam">
+              A-Team
+            </a>
+                </div>
+            </li>
+			
+			<li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a class="text-lime-400 overflow-hidden font-poppins font-semibold text-lg ease-in-out duration-300 hover:text-lime-400" href="http://panel.powacraft.sk/">
+              AT Panel
+            </a>
+                </div>
+            </li>
+			
+            <li class="hidden">
+                <div class="w-full h-16 bg-white border-2 border-lime-100 flex items-center justify-center">
+                    <a href="vip" class="a w-28 h-16 bg-cover bg-[url('/img/vip.svg')] ease-in-out duration-300 hover:contrast-125">
+                    </a>
+                </div>
+            </li>
+        </div>
+        <nav class="mx-auto p-5 relative">
+
+
+            <!-- MOBILNÁ NAVIGÁCIA -->
+
+
+            <div class="flex items-center justify-between">
+                <div class="three col absolute right-10 top-10 z-50 md:hidden" onclick="Hamburger()">
+                    <div class="hamburger" id="hamburger-2">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+
+                <!-- NAVIGÁCIA -->
+
+
+                <div class="hidden md:flex space-x-8 antialiased w-full justify-end">
+                    <a href="index" class="text-white font-poppins font-medium mt-4 ease-in-out duration-300 hover:text-lime-400">
+              Home
+            </a>
+                    <a class="text-white flex font-poppins font-medium mt-4 ease-in-out cursor-pointer duration-300 hover:text-lime-400" onclick="Pomoc()">
+              Help
+              <svg
+                class="mt-2 ml-2"
+                width="12"
+                height="8"
+                viewBox="0 0 17 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M7.5 11.5L0 0H17L7.5 11.5Z" fill="white" />
+              </svg>
+              
+            </a>
+                    <a href="prikazy" class="absolute right-119 top-16"> <span class="absolute pb-2 pt-1 font-poppins border-2 border-lime-300 rounded-md text-lime-600 font-medium hidden bg-white px-5">Commands</span></a>
+
+                    <a class="text-white overflow-hidden font-poppins font-medium mt-4 ease-in-out duration-300 hover:text-lime-400" href="http://185.240.132.132:40029/">
+              Dynmap
+            </a>
+			
+                    <a class="text-white overflow-hidden font-poppins font-medium mt-4 ease-in-out duration-300 hover:text-lime-400" href="ateam">
+              A-Team
+            </a>			
+			
+			        <a class="text-white overflow-hidden font-poppins font-medium mt-4 ease-in-out duration-300 hover:text-lime-400" href="http://panel.powacraft.sk/">
+              AT Panel
+            </a>
+
+                    <a href="vip" class="a w-28 h-16 bg-cover bg-[url('/img/vip.svg')] ease-in-out duration-300 hover:contrast-125">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <a href="#">
+            <img src="img/logo.svg" alt="" class=" sm:w-32 sm:h-32 h-16 w-16 absolute top-5 left-15 logo cursor-pointer ease-in-out duration-700 md:hover:w-36 md:hover:h-36 md:hover:top-3 md:hover:left-13" />
+        </a>
+
+
+        <!--VLNA -->
+
+
+        <div class="wave w-full bottom-0 bg-[url('/img/wave.svg')] bg-cover absolute z-10">
+
+
+            <!--IP ADRESA + script na kopírovanie -->
+
+            <div class="sm:w-128 w-80 h-48 sm:ml-6 ml-2 mt-52 float-left">
+                <h3 class="text-white font-raleway font-bold text-5xl">IP:</h3>
+                <div class="flex sm:w-128 w-full h-24">
+                    <div onclick="copy('.ip')" class="mt-2 flex sm:w-118 sm:h-16 w-80 h-11 absolute bg-white rounded-full font-quicksand font-bold text-3xl items-center justify-center ip cursor-pointer ease-in-out duration-700 hover:bg-lime-300">
+                        MC.POWACRAFT.SK
+                    </div>
+                    <img onclick="copy('.ip')" class="w-16 h-16 mt-4 ml-96 cursor-pointer hidden sm:block" src="img/copy.svg" alt="" />
+
+
+                </div>
+                <script>
+                    function copy(element) {
+                        var $temp = $("<input>");
+                        $("body").append($temp);
+                        $temp.val("mc.powacraft.sk").select();
+                        document.execCommand("copy");
+                        $temp.remove();
+
+                        $(element).text("copied");
+                        setTimeout(function() {
+                            $(element).text("MC.POWACRAFT.SK");
+                        }, 3000);
+                    }
+                </script>
+            </div>
+			
+                <!--ŠTATISTIKY -->
+
+
+            <div class="mt-10 flex w-full h-164 items-center justify-center flex-col gap-16 md:flex-row md:h-80 center">
+                <div class="h-52 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center status" data-aos="fade-up" data-aos-duration="1000">
+                    <h4 class="font-poppins font-semibold text-xl">Server status</h4>
+                    <p id="online-status" class="font-lato font-bold text-4xl"></p>
+                </div>
+                <div class="h-52 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center status" data-aos="fade-up" data-aos-duration="1500">
+                    <h4 class="font-poppins font-semibold text-xl">Playercount</h4>
+                    <img src="img/players.svg" alt="" />
+                    <h3 id="online-players" class="font-lato font-bold text-4xl"></h3>
+                </div>
+                <div class="h-52 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center status" data-aos="fade-up" data-aos-duration="2000">
+                    <h4 class="font-poppins font-semibold text-xl">Version</h4>
+                    <h3 class="font-lato font-bold text-4xl">1.20.1</h3>
+                </div>			
+            </div>
+					
+
+            <!-- KARTIČKY -->
+
+            <h3 class="font-poppins text-5xl font-bold text-white text-center mt-28">
+                What can you find there?
+            </h3>
+
+            <div class="lg:mt-10 mt-96 flex w-full h-80 items-center justify-center gap-16 flex-col lg:flex-row">
+                <div class="h-56 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center box-shadows cards  " data-aos="fade-up" data-aos-duration="1500">
+                    <h4 class="font-poppins font-semibold text-lg">Survival/Slimefun</h4>
+                    <img src="img/pickaxe.svg" alt="" />
+                    <a href="#survival">
+                        <button class="w-24 h-8 bg-lime-400 rounded-md font-poppins font-semibold text-white ease-in-out duration-500 hover:bg-lime-500">More</button> </a>
+                </div>
+                <div class="h-56 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center box-shadows cards  " data-aos="fade-up" data-aos-duration="2000">
+                    <h4 class="font-poppins font-semibold text-lg">Minigames</h4>
+                    <img src="img/chest.svg" alt="" />
+                    <a href="#minihry">
+                        <button class="w-24 h-8 bg-lime-400 rounded-md font-poppins font-semibold text-white ease-in-out duration-500 hover:bg-lime-500">More</button> </a>
+                </div>
+                <div class="h-56 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center box-shadows cards  " data-aos="fade-up" data-aos-duration="2500">
+                    <h4 class="font-poppins font-semibold text-lg">Skyblock/Oneblock</h4>
+                    <img src="img/skyblock.svg" alt="" />
+                    <a href="#skyblock">
+                        <button class="w-24 h-8 bg-lime-400 rounded-md font-poppins font-semibold text-white ease-in-out duration-500 hover:bg-lime-500">More</button> </a>
+                </div>
+                <div class="h-56 w-52 bg-white rounded-xl flex flex-col gap-6 justify-center items-center box-shadows cards  " data-aos="fade-up" data-aos-duration="3000">
+                    <h4 class="font-poppins font-semibold text-lg">Economy</h4>
+                    <img src="img/diamond.svg" alt="" />
+                    <a href="#economy">
+                        <button class="w-24 h-8 bg-lime-400 rounded-md font-poppins font-semibold text-white ease-in-out duration-500 hover:bg-lime-500">More</button> </a>
+                </div>
+            </div>
+            <img class="absolute dc bottom-0 z-40 drop-shadow-lg ml-36" src="img/dclogo.svg" alt="">
+        </div>
+
+        </div>
+        <div class="absolute right-5  mr-6 flex  gap-14 z-10 socials  items-center w-128 h-40 flex-row mt-48 justify-end md:w-40 md:h-128 md:flex-col md:mt-0 md:justify-center">
+            <a href="https://discord.powacraft.sk" target="”_blank”"><img class="drop-shadow-md ease-in-out duration-700 hover:rotate-6" src="img/discord.svg" alt="" /></a>
+            <a href="https://www.tiktok.com/@powacraft" target="”_blank”"><img class="drop-shadow-md ease-in-out duration-700 hover:rotate-6" src="img/tiktok.svg" alt="" /></a>
+            <a href="https://www.instagram.com/powacraft/" target="”_blank”"><img class="drop-shadow-md ease-in-out duration-700 hover:rotate-6" src="img/ig.svg" alt="" /></a>
+        </div>
+
+
+        <!-- NADPISY -->
+
+        <h1 class="font-righteous text-white text-center shadows mt-16 z-20">
+            PowaCraft
+        </h1>
+        <h2 class="font-poppins shadows text-center text-white font-light z-20">
+            Minecraft server with economy, survival, <br /> slimefun, sky/oneblock and minigames.
+        </h2>
+    </header>
+    <section class="filler w-full overflow-hidden  "></section>
+
+
+    <!-- DISCORD -->
+
+    <section class=" w-full h-screen overflow-hidden bg-[url('/img/night.png')] bg-cover bg-bottom bg-fixed flex items-end">
+        <div class="mt-80 w-full h-96  flex gap-56 mb-10">
+            <div class="sm:ml-24 flex flex-col w-144 h-96 justify-center items-center sm:items-start gap-4">
+                <h3 class="font-poppins text-center sm:text-left text-white text-4xl sm:text-6xl font-bold">Become part of our community!</h3>
+                <h4 class="font-poppins text-center sm:text-left text-white text-2xl">Join our discord and chat with our beloved community of players.</h4>
+                <a href="https://discord.powacraft.sk" target="”_blank”"> <button class="flex w-44 h-14 discord rounded-lg justify-center items-center gap-4 font-poppins font-bold text-white text-lg ease-in-out duration-500 hover:bg-slate-600  ">Join <img class="w-8 h-8" src="img/discord.svg" alt=""></button></a>
+            </div>
+            <iframe class="discordwidget" src="https://discord.com/widget?id=781260805265424385&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+    </section>
+
+
+    <!-- MINIHRY -->
+
+    <section class="w-full h-118 overflow-hidden flex survival" id="survival">
+        <div class="h-118 w-7/12 bg-[url('/img/m1.png')] bg-cover flex items-center justify-center">
+            <img class="h-80 drop-shadow-lg" src="img/postava.png" alt="" data-aos="fade-right" data-aos-duration="1500">
+        </div>
+        <div class="right-0  w-7/12 h-118 bg-[url('/img/section.svg')] bg-cover flex justify-end z-30 ">
+            <div class="h-118 flex flex-col w-144 mr-24 justify-center gap-6 description2">
+                <h3 class="font-poppins text-4xl font-semibold text-black">Survival/Slimefun</h3>
+                <p class="font-poppins text-black text-justify">Do you enjoy playing Survival? On our server, you'll find a large survival world that we strive to update regularly to the latest version of Minecraft. You can also enhance your experience with a large selection of perks, such as residences and shops.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="w-full h-118 overflow-hidden flex" id="minihry">
+        <div class="w-7/12 h-118 bg-[url('/img/section2.svg')] bg-cover z-10 description">
+            <div class="h-118 flex flex-col w-144 ml-24 justify-center gap-6 description">
+                <h3 class="font-poppins text-4xl font-semibold text-white shadows">Minigames</h3>
+                <p class="font-poppins text-white text-justify shadows">Have you had enough of building and survival and want to try something different? On our server, you'll find a variety of minigames which you can play by yourself or with a group of friends!</p>
+            </div>
+        </div>
+        <div class="h-118 w-7/12 bg-[url('/img/m2.png')] bg-cover bg-right right-0 flex items-center justify-center">
+            <img class="h-80 drop-shadow-lg" src="img/postava2.png" alt="" data-aos="fade-left" data-aos-duration="1500">
+        </div>
+    </section>
+    <section class="w-full h-118 overflow-hidden flex  " id="skyblock">
+        <div class="h-118 w-7/12 bg-[url('/img/m3.png')] bg-cover bg-center flex items-center justify-center">
+            <img class="h-80 drop-shadow-lg" src="img/postava3.png" alt="" data-aos="fade-right" data-aos-duration="1500">
+        </div>
+        <div class="right-0  w-7/12 h-118 bg-[url('/img/section.svg')] bg-cover flex justify-end ">
+            <div class="h-118 flex flex-col w-144 mr-24 justify-center gap-6 description2">
+                <h3 class="font-poppins text-4xl font-semibold text-black">Skyblock/Oneblock</h3>
+                <p class="font-poppins text-black text-justify">Are you an experienced survival player and you want to try something more? Try our fantastic Oneblock/Skyblock!</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="w-full h-118 overflow-hidden flex  " id="economy">
+        <div class="w-7/12 h-118 bg-[url('/img/section2.svg')] bg-cover z-10 description  ">
+            <div class="h-118 flex flex-col w-144 ml-24 justify-center gap-6 description">
+                <h3 class="font-poppins text-4xl font-semibold text-white shadows">Economy</h3>
+                <p class="font-poppins text-white text-justify shadows">Not a fan of the classic survival and looking for something more? On our server, you'll find a great economy, which has been developing since 2017! You can earn money through 
+				work or competitions and buy loads of stuff with in-game money, whether is it's items in the shop, houses or items in auctions.</p>
+            </div>
+        </div>
+        <div class="h-118 w-7/12 bg-[url('/img/m4.png')] bg-cover bg-top right-0 flex items-center justify-center">
+            <img class="h-80 drop-shadow-lg" src="img/postava4.png" alt="" data-aos="fade-left" data-aos-duration="1500">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="w-full md:h-32 h-52 bg-white flex justify-center items-center gap-2 md:gap-7 flex-col md:flex-row">
+        <div class="font-poppins text-xl font-semibold md:absolute left-15">
+            <h5>PowaCraft</h5>
+        </div>
+        <div><img class="w-24 h-24" src="img/logo.svg" alt=""></div>
+        <a href="http://adamzy.space" target="”_blank”" class="flex gap-2 md:absolute right-15">
+            <h5>Website created by</h5>
+            <h5 class="font-poppins text-orange-600 font-medium underline">Adam Ujházy</h5>
+        </a>
+    </footer>
+
+    <!-- SCRIPTY -->
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
